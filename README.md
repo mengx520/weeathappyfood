@@ -13,4 +13,5 @@ The website will be a food blog. It will allow a user to log in and post article
 
 ## Blog design
 
-![this is the blog design png] (https://github.com/me50/mengx520/raw/cs50/problems/2020/x/project/blog.png)
+![this is the blog design png](https://github.com/mengx520/cs50_finalproject_foodblog/blob/master/cs50%20blog.png?raw=true)
+
