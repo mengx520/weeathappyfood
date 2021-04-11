@@ -1,0 +1,121 @@
+body{
+    background-color:#f6eeed;
+    font-family: Script;
+    color: #4f4e4e;
+}
+
+.header{
+    background-color:#efefee;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* changing header font */
+.header h1{
+    font-size: 40px;
+    letter-spacing: 4px;
+    word-spacing: 25px;
+}
+
+/* changing navigation bar style */
+.nav{
+    text-align: center;
+    font-size: 18px;
+
+    /* center nav links */
+    display: flex;
+    justify-content: center;
+}
+
+.nav a{
+    color: #4f4e4e;
+    letter-spacing: 2px;
+}
+
+/* spacing the nav bar */
+.nav-link {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/* adding hover on nav link */
+.nav a:hover{
+    background-color: #f0c4bf;
+    /* adding hovering hand */
+    cursor: pointer;
+}
+
+/* style the current selected page */
+.nav a.active{
+    background-color: #f1eab8;
+}
+
+/* style recipes category nav bar */
+.category-nav {
+    text-align: center;
+    font-size: 15px;
+
+    /* center nav links */
+    display: flex;
+    justify-content: center;
+}
+
+.category-nav a{
+    color: #4f4e4e;
+    letter-spacing: 2px;
+}
+
+.category-link{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    display: block;
+    padding: .5rem 1rem;
+
+}
+
+.category-nav a.active{
+    background-color: #f1eab8;
+
+}
+
+.content{
+    padding-left:22rem;
+    padding-right:22rem;
+    margin-top:3rem;
+}
+
+.content h6{
+    color:#93918f;
+    margin-top: 1rem;
+}
+
+.post{
+    margin-top:1rem;
+    margin-bottom:3rem;
+    background-color:#fbf8fb;
+    padding:2rem;
+    border-top: 0.4rem solid #f5d0b5;
+}
+
+.post-title{
+    margin-bottom:1.5rem;
+    font-style:italic;
+}
+
+.post-title a{
+    color:#4f4e4e;
+}
+
+.post-title h4{
+    margin-bottom:0rem;
+}
+
+.post-date{
+    font-size:13px;
+}
+
+.post p{
+    line-height:35px;
+    font-size:18px;
+}

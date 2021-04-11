@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Login - We Eat Happy Food{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="post">
+        <form id="login" method="post" action="/login">
+          <div class="form-group">
+             <label>User Name</label>
+             <input type="text" class="form-control" name="username" placeholder="User Name">
+          </div>
+          <div class="form-group">
+             <label>Password</label>
+             <input type="password" class="form-control" name="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-black">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

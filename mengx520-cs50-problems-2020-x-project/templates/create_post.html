@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Create post - We Eat Happy Food{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="post">
+        <form id="create_post" method="post" action="/create-post">
+          <div class="form-group">
+             <label>Title</label>
+             <input type="text" class="form-control" name="title" placeholder="Post title">
+          </div>
+          <div class="form-group">
+             <label>Categories</label><br/>
+             <select class="form-control" name="categories" multiple="multiple" size="6">
+                 {% for c in categories %}
+                 <option value="{{ c["name"] }}">{{ c["name"] }}</option>
+                 {% endfor %}
+             </select>
+          </div>
+
+          <div class="form-group">
+              <label>Post body</label>
+              <textarea class="form-control" name="post_body" rows="10"></textarea>
+          </div>
+          <button type="submit" class="btn btn-black">Create</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

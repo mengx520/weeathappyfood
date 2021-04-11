@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Recipes - We Eat Happy Food{% endblock %}
+{% block content %}
+        <div class="content">
+            <nav class="category-nav">
+            {# show categories in the recipe page #}
+            {% for c in categories %}
+                {% if c["name"] == category %}
+                <a class="category-link active" href="/recipes/{{ c['name'] }}">{{ c["name"] }}</a>
+                {% else %}
+                <a class="category-link" href="/recipes/{{ c['name'] }}">{{ c["name"] }}</a>
+                {% endif %}
+            {% endfor %}
+            </nav>
+
+
+            {# if didn't specify categories show All recipes #}
+            {% if not category %}
+            <h6>All recipes</h6>
+            {% endif %}
+
+            {% for post in posts %}
+            <div class="post">
+                <div class="post-title">
+                    <a href="/posts/{{ post["url_slug"] }}"><h4>{{ post["title"] }}</h4></a>
+                    <div class="post-date">{{ post["time_created"] }}</div>
+                </div>
+                {{ post["body"]|safe }}
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}

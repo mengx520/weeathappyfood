@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{ post["title"] }} - We Eat Happy Food{% endblock %}
+
+{% block content %}
+        <div class="content">
+
+            <div class="post">
+                <div class="post-title">
+                    <a href="/posts/{{ post["url_slug"] }}"><h4>{{ post["title"] }}</h4></a>
+                    <div class="post-date">{{ post["time_created"] }}</div>
+                </div>
+                {{ post["body"]|safe }}
+            </div>
+
+        </div>
+{% endblock %}
