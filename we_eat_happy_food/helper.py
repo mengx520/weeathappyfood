@@ -1,3 +1,4 @@
+from hashlib import new
 import markdown2
 
 #convert database post to html

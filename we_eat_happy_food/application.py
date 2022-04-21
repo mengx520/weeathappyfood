@@ -33,7 +33,7 @@ Session(app)
 
 def get_db():
     #create database connection to blog.db
-    db_conn = sqlite3.connect("blog.db")
+    db_conn = sqlite3.connect("blog.db", detect_types=sqlite3.PARSE_DECLTYPES)
     #create row dictionary for select results
     db_conn.row_factory = sqlite3.Row
 
@@ -51,6 +51,11 @@ def index():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
 
 # list all recipes in Recipes category
 @app.route("/recipes")
